@@ -1,81 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:weightSum="3">
+    android:weightSum="6">
 
-    <LinearLayout
+    <TableRow
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_weight="1"
-        android:weightSum="3">
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_weight="2">
 
-        <TextView
-            android:id="@+id/contador"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Contador: "
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="50sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:gravity="center"
+            android:orientation="horizontal">
 
-    <LinearLayout
+            <TextView
+                android:id="@+id/res"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="0"
+                android:textAlignment="center"
+                android:textSize="50sp" />
+
+        </LinearLayout>
+
+
+
+    </TableRow>
+
+    <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="horizontal"
         android:weightSum="4">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="71dp"
-            android:layout_height="80dp"
+            android:id="@+id/button1"
+            android:layout_width="37dp"
+            android:layout_height="130dp"
             android:layout_weight="1"
-            android:onClick="aumentarContador"
-            android:text="+"
-            android:textSize="50sp"
-            tools:layout_weight="1" />
+            android:onClick="concatNum"
+            android:text="1" />
+
         <Space
-            android:layout_width="20dp"
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:onClick="concatNum"
+            android:text="2" />
+
+        <Space
+            android:layout_width="30dp"
             android:layout_height="0dp"></Space>
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="71dp"
-            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
             android:layout_weight="1"
-            android:onClick="decrementarContador"
-            android:text="-"
-            android:textSize="50sp"
-            tools:layout_weight="1" />
-    </LinearLayout>
+            android:onClick="concatNum"
+            android:text="3" />
 
-    <LinearLayout
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/suma"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:onClick="allocateOperation"
+            android:text="+" />
+    </TableRow>
+
+    <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:text="4"
+            android:onClick="concatNum"/>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:text="5"
+            android:onClick="concatNum"/>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:text="6"
+            android:onClick="concatNum"/>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/resta"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:text="-"
+            android:onClick="allocateOperation"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:text="7"
+            android:onClick="concatNum"/>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:text="8"
+            android:onClick="concatNum"/>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:text="9"
+            android:onClick="concatNum"/>
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/multiplicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:text="*"
+            android:onClick="allocateOperation"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:weightSum="3">
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="73dp"
-            android:layout_height="72dp"
+            android:id="@+id/button0"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
             android:layout_weight="1"
-            android:onClick="resetearContador"
-            android:text="Resetear"
-            tools:layout_weight="1" />
-    </LinearLayout>
-</LinearLayout>
+            android:onClick="concatNum"
+            android:text="0" />
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/equal"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:onClick="resolveOperation"
+            android:text="=" />
+
+        <Space
+            android:layout_width="30dp"
+            android:layout_height="0dp"></Space>
+
+        <Button
+            android:id="@+id/division"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_weight="1"
+            android:onClick="allocateOperation"
+            android:text="/" />
+
+    </TableRow>
+
+</TableLayout>
